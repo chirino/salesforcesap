@@ -53,6 +53,10 @@
 
   <repositories>
     <repository>
+      <id>lib</id>
+      <url>file://${project.basedir}/lib</url>
+    </repository>
+    <repository>
       <id>release.fusesource.org</id>
       <name>FuseSource Release Repository</name>
       <url>http://repo.fusesource.com/nexus/content/repositories/releases</url>
@@ -138,8 +142,6 @@
 		<groupId>com.sap.conn.jco</groupId>              
 		<artifactId>sapjco3</artifactId>              
 		<version>3.0.11</version>              
-		<scope>system</scope>              
-		<systemPath>${project.basedir}/lib/sapjco3.jar</systemPath>        
 	</dependency>
     <dependency>
       <groupId>org.fusesource</groupId>
@@ -260,7 +262,6 @@
 			</goals>
             <configuration>
               <javaMainClass>org.apache.camel.spring.Main</javaMainClass>
-              <JAVA_MAIN_ARGS>-cp ${project.basedir}/lib/sapjco3.jar</JAVA_MAIN_ARGS>
             </configuration>
           </execution>
         </executions>
